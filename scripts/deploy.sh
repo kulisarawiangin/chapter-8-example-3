@@ -14,8 +14,8 @@
 #
 
 set -u # or set -o nounset
-: "$CONTAINER_REGISTRY"
-: "$VERSION"
+: "chap08.azurecr.io"
+: "1"
 
 envsubst < ./scripts/kubernetes/deploy.yaml | kubectl apply -f -
 
